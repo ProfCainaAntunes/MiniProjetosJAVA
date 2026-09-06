@@ -8,9 +8,7 @@ ___
 
 > O objetivo deste mini projeto é praticar o uso das Classes Java apresentadas em aula. Além disso esta atividade ajudará a compreender o funcionamento de classes estáticas, modificador final, sobrecarga de métodos e exceções.  
 
-O reaproveitamento de código é essencial no desenvolvimeto de aplicações complexas, portanto é fundamental conhecer algumas ferramentas  básicas disponibilizadas pela comunicadade de desenvolvedores através de softwares e bibliotecas de código aberto, bem como saber interpretar suas documentações.
-
-Para mais informações acesse [Aula 03: Classes Java.](https://cainaantunes.notion.site/Aula-03-Classes-Java-3b1bde521b3b80719101f3bfcee66fcc?source=copy_link) e [Aula 04: Exceções](https://cainaantunes.notion.site/Aula-04-Exceptions-Exce-es-3b1bde521b3b801da213e5d44df1a4e3?source=copy_link)
+O projeto apresenta uma interface gráfica (`TemperatureConverterGUI`), que é composto um painel (`JPanel`) com *grid layout* de 2 linhas e 3 colunas. Um `JTextField` coleta a entrada do usuário. O usuário também pode selecionar a escala de origem e destino utilizando 2 `JComboBox`. Por fim, um `JButton` dispara a conversão quando acionado.
 
 ***
 
@@ -24,7 +22,7 @@ O sistema deverá atender aos seguintes requisitos:
 
 1. A classe deve se chamar `TemperatureConverter`.
 2. A classe deve ser estática, pois não faz sentido criar instâncias para ela.
-    > **Como cria classes estáticas em Java:** Declare a classe como public (ou final para impedir herança).Crie um construtor privado para impedir que outras partes do código usem o operador new. Adicione apenas métodos e atributos static.
+    > **Como cria classes estáticas em Java:** Declare a classe como public. Crie um construtor privado para impedir que outras partes do código usem o operador new. Adicione apenas métodos e atributos static.
 3. Devem existir métodos para conversão entre todas as principais escalas de temperatura: Celsius (°C), Fahrenheit (°F) e Kelvin (K).
 4. Cada método deverá ser público e estático e receber um valor `double` como parâmetro, retornando também um `double`.
 5. Se atentar à valores abaixo do zero absoluto.
@@ -79,7 +77,7 @@ $$
 $$
 ***
 
-# Extra: Criar Interfaces com `javax.swing`
+## Extra: Criar Interfaces com `javax.swing`
 
 O `javax.swing` é uma biblioteca para criar interfaces gráficas Desktop em Java. Ela possui total controle sobre a renderização, permitindo que a janela tenha o mesmo design independente do sistema operacional.
 

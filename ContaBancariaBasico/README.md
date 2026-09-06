@@ -42,15 +42,15 @@ Para mais informações acesse [Aula 01: Paradigma POO.](https://cainaantunes.no
         }
         class JFrame{}
         class App{
-            + BankGUI
-            + main():void
+            + main(): void
         }
         App *-- BankGUI
         BankGUI --|> JFrame
         ContaBancaria --* BankGUI
     ```
-    
-    **Instruções para Execução:**
+    ---
+
+    **Tarefas:**
     1. Implemente a classe `ContaBancaria`. Se atente às possíveis operações inválidas que podem envolver os métodos `depositar(double valor)` e `sacar(double valor)`. Além disso também pessa na questão de encapsulamento para protejer seus atributos internos, espesiamente o `saldo`.
     2. A classe `BankGUI` é responsável por gerar uma interface gráfica para a aplicação utilizando a biblioteca `javax.swing`. Ela já está parcialmente implementada, mas você deve:
         * Instanciar um objeto `ContaBancaria` dentro desta classe (utilise `JOptionPane.showInputDialog()` para solicitar o nome do proprietário da conta).
@@ -67,5 +67,24 @@ Para mais informações acesse [Aula 01: Paradigma POO.](https://cainaantunes.no
 
     3. A classe `App` apenas inicializa a aplicação, você não precisa fazer alterações nela.
     <br>
+
+***
+
+## Extra: Criar Interfaces com `javax.swing`
+
+O `javax.swing` é uma biblioteca para criar interfaces gráficas Desktop em Java. Ela possui total controle sobre a renderização, permitindo que a janela tenha o mesmo design independente do sistema operacional.
+
+Veja a seguir alguns componentes disponibiliza pela bilbioteca: 
+
+| Componente | Função no Projeto | Principais Métodos |
+| :--- | :--- | :--- |
+| **JFrame** | Janela principal que agrupa e exibe todos os outros elementos. | `setSize()`, `setVisible()`, `setDefaultCloseOperation()` |
+| **JTextField** | Caixa de entrada de texto onde o usuário digita o número. | `getText()`, `setText()`, `setHorizontalAlignment()` |
+| **JLabel** | Rótulo de texto estático usado para exibir os resultados. | `setText()`, `getText()` |
+| **JButton** | Botão que age como gatilho para executar a conversão. | `addActionListener()`, `doClick()` |
+| **JComboBox** | Lista suspensa usada para escolher as escalas. | `getSelectedItem()`, `setSelectedItem()` |
+
+> ### A mecânica dos Eventos: `ActionListener` e `ActionEvent`
+> O Java trabalha com a Orientação a Eventos utilizando "ouvintes". O `ActionListener` atua como um radar conectado a um componente (como o `JButton`). Quando o botão é clicado, o Java empacota todas as informações desse clique em um objeto chamado `ActionEvent` e o envia. O ouvinte captura essa "mensagem" instantaneamente através do método `actionPerformed` e executa a ação contida em sua implementação.
 
 ***
