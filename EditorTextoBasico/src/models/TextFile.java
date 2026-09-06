@@ -8,46 +8,32 @@ public class TextFile {
     
     // Constructors
     public TextFile(String name){
-        this(name,"");
+        
     }
 
     public TextFile(String name, String content){
-        this.name = checkName(name);;
-        this.content = content;
-        size = calculeSize();
+        
     }
 
     // Methodes
     public void edit(String content){
-        if(content==null)
-            throw new IllegalArgumentException("O conteúdo do arquivo não pode ser nulo.");
-        this.content=content;
-        size = calculeSize();
+        
     }
 
     public void clear(){
-        content = "";
-        size = calculeSize();
+        
     }
 
     public void rename(String name){
-        this.name=checkName(name);
+        
     }
 
     private String checkName(String name){
-        if(name==null)
-            throw new IllegalArgumentException("Nome inválido!");
-
-        String nameChecked = name.replaceAll("[^a-zA-Z0-9]", "");
-
-        if(nameChecked.isBlank())
-            throw new IllegalArgumentException("Nome inválido!");
-        
-        return nameChecked;
+        return "";
     }
 
     private int calculeSize(){
-        return content.length();
+        return 0;
     }
 
     // Getters
@@ -66,7 +52,7 @@ public class TextFile {
     // toString()
     @Override
     public String toString() {
-        return "Arquivo: " + name + " | tamanho: " + size + " bytes.";
+        return "";
     }
 
     
