@@ -1,3 +1,5 @@
+![senai_logo](./src/image/logo.png)
+
 # ScreenSaver – Projeto Base para Programação Orientada a Objetos
 
 ## Objetivo
